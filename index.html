@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudyHub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <h1>StudyHub 📚</h1>
+
+            <button id="themeBtn">🌙</button>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- Welcome -->
+        <section class="welcome">
+            <h2>Welcome to StudyHub 👋</h2>
+            <p>Organize your study and achieve your goals.</p>
+        </section>
+
+
+        <!-- Statistics -->
+        <section class="stats">
+
+            <div class="stat-card">
+                <h3 id="totalTasks">0</h3>
+                <p>Total Tasks</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 id="completedTasks">0</h3>
+                <p>Completed</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 id="pendingTasks">0</h3>
+                <p>Pending</p>
+            </div>
+
+        </section>
+
+
+        <!-- Add Task -->
+        <section class="task-form">
+
+            <h2>Add New Task</h2>
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter your task..."
+            >
+
+            <select id="categoryInput">
+                <option value="Study">Study</option>
+                <option value="Assignment">Assignment</option>
+                <option value="Exam">Exam</option>
+                <option value="Personal">Personal</option>
+            </select>
+
+            <button id="addBtn">Add Task</button>
+
+        </section>
+
+
+        <!-- Tasks -->
+        <section class="tasks-section">
+
+            <div class="task-header">
+                <h2>My Tasks</h2>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search tasks..."
+                >
+            </div>
+
+
+            <!-- Filters -->
+            <div class="filters">
+
+                <button class="filter active" data-filter="all">
+                    All
+                </button>
+
+                <button class="filter" data-filter="pending">
+                    Pending
+                </button>
+
+                <button class="filter" data-filter="completed">
+                    Completed
+                </button>
+
+            </div>
+
+
+            <!-- Task List -->
+            <div id="taskList"></div>
+
+        </section>
+
+
+        <!-- Progress -->
+        <section class="progress-section">
+
+            <h2>Study Progress 📊</h2>
+
+            <div class="progress-container">
+
+                <div class="progress-bar">
+                    <div id="progress"></div>
+                </div>
+
+                <p id="progressText">0% Completed</p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 StudyHub | Created by Aliaa Hagag</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
